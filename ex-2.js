@@ -12,8 +12,7 @@ function atLeastFive(array, operation) {
   // Start coding here
   let over70 = 0;
   for (let i = 0; i < array.length; i++) {
-    array[i] = checkGradeOver70(array[i]);
-    if (array[i]) {
+    if (operation(array[i])) {
       over70 += 1;
     }
   }
