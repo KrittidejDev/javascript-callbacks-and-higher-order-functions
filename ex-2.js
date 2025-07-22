@@ -10,15 +10,14 @@ function checkGradeOver70(score) {
 
 function atLeastFive(array, operation) {
   // Start coding here
-  let over70 = 0;
+  let count= 0;
   for (let i = 0; i < array.length; i++) {
-    array[i] = checkGradeOver70(array[i]);
-    if (array[i]) {
-      over70 += 1;
+    if (operation(array[i])) {
+      count++;
     }
   }
 
-  return over70 >= 5;
+  return count >= 5;
 }
 
 // Using `atLeastFive` function here
