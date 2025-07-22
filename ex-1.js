@@ -8,15 +8,15 @@ function addSalary5000(previousSalary) {
 
 function forEach(array, operation) {
   // Start coding here
-  let result = [];
+  const result = [];
   for (let i = 0; i < array.length; i++) {
-    result[i] = operation(array[i]);
+    result.push(operation(array[i]));
   }
   return result;
 }
 
 // Using `forEach` function here
-let newEmployeeSalaries = forEach(employeeSalaries, addSalary5000);
+const newEmployeeSalaries = forEach(employeeSalaries, addSalary5000);
 console.log(newEmployeeSalaries); // [25005, 45000, 37000, 19500, 349000]
 
 /*
